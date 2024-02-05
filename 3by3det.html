@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>4x4 Matrix Determinant Calculator</title>
+    <script>
+        function calculateDeterminant() {
+            // Get the matrix values from the input fields
+            const a = parseFloat(document.getElementById("a").value);
+            const b = parseFloat(document.getElementById("b").value);
+            const c = parseFloat(document.getElementById("c").value);
+            const d = parseFloat(document.getElementById("d").value);
+            const e = parseFloat(document.getElementById("e").value);
+            const f = parseFloat(document.getElementById("f").value);
+            const g = parseFloat(document.getElementById("g").value);
+            const h = parseFloat(document.getElementById("h").value);
+            const i = parseFloat(document.getElementById("i").value);
+            const j = parseFloat(document.getElementById("j").value);
+            const k = parseFloat(document.getElementById("k").value);
+            const l = parseFloat(document.getElementById("l").value);
+            const m = parseFloat(document.getElementById("m").value);
+            const n = parseFloat(document.getElementById("n").value);
+            const o = parseFloat(document.getElementById("o").value);
+            const p = parseFloat(document.getElementById("p").value);
+
+            // Calculate the determinant
+            const determinant =
+                a * (e * (i * p - l * o) - h * (f * p - k * o) + g * (f * l - k * i)) -
+                b * (d * (i * p - l * o) - h * (c * p - n * o) + g * (c * l - n * i)) +
+                c * (d * (f * p - k * o) - e * (c * p - n * o) + g * (c * k - n * f)) -
+                d * (e * (h * p - l * m) - i * (g * p - k * m) + j * (g * l - k * h));
+
+            // Display the result
+            document.getElementById("result").textContent = "Determinant: " + determinant;
+        }
+    </script>
+    <style>
+        body{
+            margin: auto;
+            text-align: center;
+
+        }
+
+        button{
+            margin-top: 50px;
+        }
+
+       #mains{
+        border: 2px solid black;
+       }
+
+       #rows{
+       margin-top: 25px;
+       }
+
+       #detform{
+        color: blueviolet;
+        border: 4px solid black;
+        background-color: whitesmoke;
+       }
+
+    </style>
+</head>
+<body>
+    <div id="mains">
+    <h1>4x4 Matrix Determinant Calculator</h1>
+    <div id="rows">
+        <label for="a">a:</label>
+        <input type="text" id="a">
+        <label for="b">b:</label>
+        <input type="text" id="b">
+        <label for="c">c:</label>
+        <input type="text" id="c">
+        <label for="d">d:</label>
+        <input type="text" id="d">
+    </div>
+    <div id="rows">
+        <label for="e">e:</label>
+        <input type="text" id="e">
+        <label for="f">f:</label>
+        <input type="text" id="f">
+        <label for="g">g:</label>
+        <input type="text" id="g">
+        <label for="h">h:</label>
+        <input type="text" id="h">
+    </div>
+    <div id="rows">
+        <label for="i">i:</label>
+        <input type="text" id="i">
+        <label for="j">j:</label>
+        <input type="text" id="j">
+        <label for="k">k:</label>
+        <input type="text" id="k">
+        <label for="l">l:</label>
+        <input type="text" id="l">
+    </div>
+    <div id="rows">
+        <label for="m">m:</label>
+        <input type="text" id="m">
+        <label for="n">n:</label>
+        <input type="text" id="n">
+        <label for="o">o:</label>
+        <input type="text" id="o">
+        <label for="p">p:</label>
+        <input type="text" id="p">
+    </div>
+    <button onclick="calculateDeterminant()">Calculate Determinant</button>
+    <p id="result"></p>
+    </div>
+<h1>Determinant Form</h1>
+    <div id="detform">
+        
+        <h1><span>a</span> &nbsp  &nbsp&nbsp<span>b</span>  &nbsp&nbsp &nbsp <span>c</span>  &nbsp &nbsp &nbsp<span>d</span></h1>
+        <h1><span>e</span>  &nbsp &nbsp &nbsp<span>f</span> &nbsp &nbsp &nbsp <span>g</span> &nbsp &nbsp  &nbsp<span>h</span></h1>
+        <h1><span>i</span> &nbsp &nbsp  &nbsp<span>j</span>  &nbsp &nbsp &nbsp<span>k</span> &nbsp &nbsp  &nbsp<span>l</span></h1>
+        <h1><span>m</span>   &nbsp &nbsp &nbsp<span>n</span>  &nbsp &nbsp &nbsp<span>o</span>  &nbsp &nbsp &nbsp<span>p</span></h1>
+        
+    </div>
+</body>
+</html>

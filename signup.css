@@ -1,0 +1,32 @@
+#signup{
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid black;
+    text-align: center;
+}
+
+h2{
+    color: red;
+}
+
+#web{
+    margin-top: 20px;
+    border: 10px solid #b5838d;
+    border-radius: 20px;
+    text-align: center;
+    padding-bottom: 100px;
+    padding-top: 20px;
+    background-color: #ffcdb2;
+}
+
+#aa{
+    color:#6d6875;
+}
+
+.aaa{
+    margin-top: 20px;
+    background-color: #ffcdb2;
+   
+    
+}

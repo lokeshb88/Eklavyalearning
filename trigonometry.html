@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trigonometric Calculator</title>
+
+    <style>
+        div{
+            text-align: center;
+            border: 5px solid black;
+            border-radius: 25px;
+            padding: 20px;
+        }
+
+        #result{
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Trigonometric Calculator</h1>
+    <form id="trigCalculator">
+        <label for="angle">Enter Angle:</label>
+        <input type="number" id="angle" required><br><br>
+
+        <label for="trigFunction">Select Trigonometric Function:</label>
+        <select id="trigFunction">
+            <option value="sin">Sine</option>
+            <option value="cos">Cosine</option>
+            <option value="tan">Tangent</option>
+        </select><br><br>
+
+        <label for="unit">Select Unit:</label>
+        <select id="unit">
+            <option value="degrees">Degrees</option>
+            <option value="radians">Radians</option>
+        </select><br><br>
+
+        <input type="button" value="Calculate" onclick="calculateTrigValue()">
+    </form>
+
+   
+     </div>
+
+      <p id="result"></p>
+
+    <script>
+        function calculateTrigValue() {
+            const angle = parseFloat(document.getElementById("angle").value);
+            const trigFunction = document.getElementById("trigFunction").value;
+            const unit = document.getElementById("unit").value;
+
+            let result;
+
+            if (unit === "degrees") {
+                const angleRadians = angle * (Math.PI / 180);
+
+                if (trigFunction === "sin") {
+                    result = Math.sin(angleRadians);
+                } else if (trigFunction === "cos") {
+                    result = Math.cos(angleRadians);
+                } else if (trigFunction === "tan") {
+                    result = Math.tan(angleRadians);
+                }
+            } else if (unit === "radians") {
+                if (trigFunction === "sin") {
+                    result = Math.sin(angle);
+                } else if (trigFunction === "cos") {
+                    result = Math.cos(angle);
+                } else if (trigFunction === "tan") {
+                    result = Math.tan(angle);
+                }
+            }
+
+            document.getElementById("result").textContent = `Result: ${result.toFixed(4)}`;
+        }
+    </script>
+</body>
+</html>
