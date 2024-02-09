@@ -771,5 +771,23 @@ a:hover{
     font-size: 13px;
 }
 
+#sideinfo{
+    height: fit-content;
+    width: 30px;
+    background-color: #ff8800a2;
+    /* border: 2px solid black; */
+    position: fixed;
+    right: 1px;
+    bottom: 10px;
+    writing-mode: vertical-rl;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 5px;
+}
+
+#sideinfo h2{
+    margin-bottom: 5px;
+    color: black;
+}
 
 }
