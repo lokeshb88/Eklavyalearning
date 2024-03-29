@@ -297,9 +297,6 @@ footer{
     }
 }
 
-
-
-
 #ekname{
     visibility: hidden;
 }
@@ -337,16 +334,15 @@ footer{
     padding-bottom: 5px;
 }
 
-#outer-search{
+/* #outer-search{
     background-color:#ff8800cc ;
-}
+} */
 
 #searchInput {
     
     display: inline-block;
     visibility: visible;
     text-align: center;
-    /* flex: 1; */
     padding: 10px;
     border: none;
     outline: none;
@@ -354,11 +350,23 @@ footer{
 }
 
 #ekname{
-    display: block;
+    display: flex;
     visibility: visible;
+
+}
+
+#icon{
+    visibility: visible;
+    height: 80px;
+    width: 80px;
+    border-radius: 30%;
+}
+
+#gname{
     text-align: center;
-    font-size: 30px;
-    margin-top: 10px;
+    font-size: 50px;
+    margin: auto;
+    margin-left: 30px;
 }
 
 #ourteam{
@@ -741,19 +749,19 @@ a:hover{
 }
 
 #selection{
-    /* border: 2px solid black ; */
     border: none;
+    /* display:inline; */
     height: 250px;
     margin: auto;
     margin-top: 10px;
     width: 80%;
+    overflow-x: auto;
     overflow-y: auto;
     padding-top: 10px;   
 }
 
 #selectionnum{
-    animation: verticalSide 10s linear infinite;
-    display: inline-block;
+    animation: selections 5s linear infinite;
     border: 2px solid;
     height: 80%;
     margin: auto;
@@ -772,14 +780,9 @@ a:hover{
 }
 
 #sideinfo{
-    height: fit-content;
-    width: 30px;
-    background-color: #ff8800a2;
-    /* border: 2px solid black; */
     position: fixed;
     right: 1px;
     bottom: 10px;
-    writing-mode: vertical-rl;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     padding: 5px;
@@ -789,5 +792,7 @@ a:hover{
     margin-bottom: 5px;
     color: black;
 }
+
+
 
 }
